@@ -1,0 +1,83 @@
+
+        <!DOCTYPE HTML><html>
+          <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+            <link rel="stylesheet" type="text/css" href="style.css">
+          </head>
+        <body>
+          <h2>Double-Helix Light-Modes:</h2>
+          <p>
+             Hi, choose your Mode. The Lamp will display the corresponding Pattern.
+          </p>
+          <p>
+            <form action="/get">
+              <p id="subtext"> These modes have a pre-set color: </p>
+              <input type="hidden" id="mode" name="mode" >
+
+              <input type="submit" name="Rainbow fade" value="Rainbow fade" onclick="ButtonClick()"/>
+              <input type="hidden" id="Rainbow fade" value=Rainbow_fade  >
+            
+              <input type="submit" name="Rainbow run" value="Rainbow run" onclick="ButtonClick()"/>
+              <input type="hidden" id="Rainbow run" value=Rainbow_run  >
+
+            </br> </br>
+            <p id="subtext"> For these modes you can also specifiy a color: </p>>
+
+            <input type="submit" name="Strobe" value="Strobe" onclick="ButtonClick()"/>
+            <input type="hidden" id="Strobe" value=Strobe  >
+ 
+            <input type="submit" name="Snake1" value="Snake1" onclick="ButtonClick()"/>
+            <input type="hidden" id="Snake1" value=Snake1  >
+
+            <input type="submit" name="Snake2" value="Snake2" onclick="ButtonClick()"/>
+            <input type="hidden" id="Snake2" value=Snake2  >
+
+            <input type="submit" name="Fire" value="Fire" onclick="ButtonClick()"/>
+            <input type="hidden" id="Fire" value=Fire  >
+          </form>
+
+            </br> </br> 
+          <form action="/get">
+            <input type="hidden" id="color" name="color" >
+
+            <input type="submit" name="Red" value="Red" onclick="ButtonClick()"/>
+            <input type="hidden" id="Red" value=Red  >
+
+            <input type="submit" name="Green" value="Green" onclick="ButtonClick()"/>
+            <input type="hidden" id="Green" value=Green  >
+
+            <input type="submit" name="Blue" value="Blue" onclick="ButtonClick()"/>
+            <input type="hidden" id="Blue" value=Blue  >
+
+            <input type="submit" name="Lila" value="Lila" onclick="ButtonClick()"/>
+            <input type="hidden" id="Lila" value=Lila  >
+  
+          </form>
+
+          <form action="/get">
+            <input type="hidden" id="Off" name="color" >
+            <input type="submit" name="Off" value="Off" onclick="ButtonClick()"/>
+            <input type="hidden" id="Off" value=Off  >
+          </form>
+
+          </p>
+          <p id="subtext"> Current Mode: %MODE% </p>
+          <p id="subtext"> Current Color: %COLOR% </p>
+        </body>
+
+        <script>
+        function ButtonClick() {
+              alert("Saved value to ESP SPIFFS");     
+              setTimeout(() => {
+                document.location.reload(true);
+              }, 300)
+          }
+
+        function submitMessage() {
+            alert("Saved value to ESP SPIFFS");
+            setTimeout(function(){ document.location.reload(); }, 300);
+          }
+
+        </script>
+</html>

@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\DNA_lamp"
+		},
+		{
+			"name": "DNA-LAMP",
+			"path": ".."
+		},
+		{
+			"name": "HTML-LITTLEFS-demo",
+			"path": "..\\..\\HTML-LITTLEFS-demo"
+		}
+	],
+	"settings": {}
+}
