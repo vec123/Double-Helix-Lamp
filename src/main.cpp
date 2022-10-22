@@ -163,7 +163,7 @@ void loop() {
           break;
         case evStringFire:
           Serial.println("6");
-          Fire(55,120,15)
+          Fire(55,120,15);
 
           break;
         case evStringOff:
